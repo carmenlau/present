@@ -1,0 +1,104 @@
+Redux on iOS
+3 Nov 2015
+
+Ben Lei
+ben181231@gmail.com
+
+
+* Overview
+
+- Action Creator
+- Dispatcher
+- Reducers
+- Store
+- Views / ViewControllers
+
+.code redux-ios-assets/overview.ascii
+
+
+* Action Creator
+
+- User Action from _ViewController_
+    [self.actionHub viewFollowingTopic:fid];
+
+- Action without API calls
+.code redux-ios-assets/action-creator.m /1 OMIT/,/2 OMIT/
+
+
+* Action Creator (Con't)
+
+- Action with API calls
+.code redux-ios-assets/action-creator.m /2 OMIT/,/3 OMIT/
+
+
+* Dispatcher
+
+- Keep a list reducers
+.code redux-ios-assets/dispatcher.h
+
+
+* Dispatcher (Con't)
+
+- Dispatching events
+.code redux-ios-assets/dispatcher.m /1 OMIT/,/2 OMIT/
+
+
+* Store
+
+- Singleton
+- != Persistent Store
+- Immutable Dictionary
+.code redux-ios-assets/store.h
+
+
+* Reducers
+
+- 1 Dispatcher, N Reducers
+.code redux-ios-assets/dispatcher.m /2 OMIT/,/3 OMIT/
+
+- Receive Notification and Modify Store
+.code redux-ios-assets/reducer.h
+
+
+* Reducers (Con't)
+
+- Each reducer performs their own modification
+.code redux-ios-assets/reducer.m /1 OMIT/,/2 OMIT/
+
+
+* Reducers (Con't)
+
+- Modify = Mutable Copy + Update + Assign
+.code redux-ios-assets/reducer.m /2 OMIT/,/3 OMIT/
+
+
+* View
+
+- Add / Remove Observer
+.code redux-ios-assets/viewController.m /1 OMIT/,/2 OMIT/
+
+
+* View (Con't)
+
+- Update When Store Changed - Update loading state
+.code redux-ios-assets/viewController.m /2 OMIT/,/3 OMIT/
+
+
+* View (Con't)
+
+- Update When Store Changed - Update data presentation
+.code redux-ios-assets/viewController.m /3 OMIT/,/4 OMIT/
+
+
+* Recap
+
+- Data flows in a single direction
+.code redux-ios-assets/overview.ascii
+
+
+* Reference
+.link https://facebook.github.io/flux/docs/overview.html Flux Overview
+.link http://redux.js.org/ Redux
+
+
+
