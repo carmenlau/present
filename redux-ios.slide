@@ -40,13 +40,36 @@ ben181231@gmail.com
 * Dispatcher (Con't)
 
 - Dispatching events
-.code redux-ios-assets/dispatcher.m
+.code redux-ios-assets/dispatcher.m /1 OMIT/,/2 OMIT/
+
+
+* Store
+
+- Singleton
+- != Persistent Store
+- Immutable Dictionary
+.code redux-ios-assets/store.h
 
 
 * Reducers
 
+- 1 Dispatcher, N Reducers
+.code redux-ios-assets/dispatcher.m /2 OMIT/,/3 OMIT/
 
-* Store
+- Receive Notification and Modify Store
+.code redux-ios-assets/reducer.h
+
+
+* Reducers (Con't)
+
+- Each reducer performs their own modification
+.code redux-ios-assets/reducer.m /1 OMIT/,/2 OMIT/
+
+
+* Reducers (Con't)
+
+- Modify = Mutable Copy + Update + Assign
+.code redux-ios-assets/reducer.m /2 OMIT/,/3 OMIT/
 
 
 * View

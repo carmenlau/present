@@ -17,10 +17,9 @@ __weak typeof(self) wself = self;
                 NSLocalizedDescriptionKey: @"Some Error Message"
             }];
         }
-
-}
-fail:^(NSError *error) {
-  [wself.dispatcher dispatchNotification:DispatcherEventUserLoginFail
-      parameters:@{ NSLocalizedDescriptionKey: error.localizedDescription }];
-}];
+    }
+    fail:^(NSError *error) {
+      [wself.dispatcher dispatchNotification:DispatcherEventUserLoginFail
+          parameters:@{ NSLocalizedDescriptionKey: error.localizedDescription }];
+    }];
 // 3 OMIT
