@@ -11,7 +11,7 @@ ben181231@gmail.com
 - Dispatcher
 - Reducers
 - Store
-- View
+- Views / ViewControllers
 
 .code redux-ios-assets/overview.ascii
 
@@ -73,3 +73,32 @@ ben181231@gmail.com
 
 
 * View
+
+- Add / Remove Observer
+.code redux-ios-assets/viewController.m /1 OMIT/,/2 OMIT/
+
+
+* View (Con't)
+
+- Update When Store Changed - Update loading state
+.code redux-ios-assets/viewController.m /2 OMIT/,/3 OMIT/
+
+
+* View (Con't)
+
+- Update When Store Changed - Update data presentation
+.code redux-ios-assets/viewController.m /3 OMIT/,/4 OMIT/
+
+
+* Recap
+
+- Data flows in a single direction
+.code redux-ios-assets/overview.ascii
+
+
+* Reference
+.link https://facebook.github.io/flux/docs/overview.html Flux Overview
+.link http://redux.js.org/ Redux
+
+
+
