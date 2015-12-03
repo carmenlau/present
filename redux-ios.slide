@@ -4,6 +4,7 @@ Redux on iOS
 Ben Lei
 ben181231@gmail.com
 
+
 * Overview
 
 - Action Creator
@@ -14,6 +15,7 @@ ben181231@gmail.com
 
 .code redux-ios-assets/overview.ascii
 
+
 * Action Creator
 
 - User Action from _ViewController_
@@ -22,15 +24,29 @@ ben181231@gmail.com
 - Action without API calls
 .code redux-ios-assets/action-creator.m /1 OMIT/,/2 OMIT/
 
+
 * Action Creator (Con't)
 
 - Action with API calls
 .code redux-ios-assets/action-creator.m /2 OMIT/,/3 OMIT/
 
+
 * Dispatcher
+
+- Keep a list reducers
+.code redux-ios-assets/dispatcher.h
+
+
+* Dispatcher (Con't)
+
+- Dispatching events
+.code redux-ios-assets/dispatcher.m
+
 
 * Reducers
 
+
 * Store
+
 
 * View
