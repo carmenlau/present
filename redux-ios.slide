@@ -1,9 +1,41 @@
-Redux on iOS
-3 Nov 2015
+How are we using "redux structure" in Objective-C
+4 Dec 2015
 
-Ben Lei
-ben181231@gmail.com
+* iOS App Architecture
+- MVC - Huge View Controller is a nightmare 
+- VIPER - Separate responsibility and well-defined
 
+* Web
+- Backbone
+- Angular
+- Rect + flux
+- Redux
+
+* React ＋ Flux
+.image redux-ios-assets/react-flux.png
+
+* React ＋ Flux
+- Unidirectional data flow
+- Clear responsibility
+- Make consistency between state and views much easier
+
+* Originally store is singleton in flux, but real world is more complicated
+- handle optimistic updates
+- server-side rendering
+- fetching data before performing route transitions
+- cache
+- .... different flux implementations show up
+
+* Redux
+- Single source of truth (One big state tree)
+    - The state of your whole application is stored in an object tree within a single state.
+- State is read-only
+    - The only way to mutate the state is to emit an action, an object describing what happened.
+- Mutations are written as pure functions
+    - To specify how the state tree is transformed by actions, you write pure reducers.
+
+* Redux
+.image redux-ios-assets/redux.png
 
 * Overview
 
